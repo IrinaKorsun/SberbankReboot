@@ -7,57 +7,57 @@ import java.io.InputStreamReader;
 public class Task_01 {
     public static void main(String[] args) throws IOException {
         Task_01 t = new Task_01();
-        int[] mass = t.initAndWriteMas();
+        double[] mass = t.initAndWriteMas();
         t.printMas(mass);
         t.minValue(mass);
         t.maxValue(mass);
         t.middleValue(mass);
     }
-    //Метод для определение минимального значения массива
-    public int minValue(int[] mas){
-        int min = mas[0];
-        for (int num : mas) {
+    //Метод для определения минимального значения массива
+    public double minValue(double[] mas){
+        double min = mas[0];
+        for (double num : mas) {
             if (num < min) {
                 min = num;
             }
         }
-        System.out.println("minValue = " + min);
+        System.out.println("Минимальное значение массива = " + min);
         return min;
     }
     //Метод для определения максимального значения массива
-    public int maxValue(int[] mas){
-        int max = mas[0];
-        for (int num : mas) {
+    public double maxValue(double[] mas){
+        double max = mas[0];
+        for (double num : mas) {
             if (num > max) {
                 max = num;
             }
         }
-        System.out.println("maxValue = " + max);
+        System.out.println("Максимальное значение массива = " + max);
         return max;
     }
-    //Метод для определения среднего значения массива
-    public int middleValue(int[]mas){
-        int sum = 0;
+    //Метод для определения среднего арифметического значения массива
+    public double middleValue(double[]mas){
+        double sum = 0;
         for(int i = 0; i < mas.length; i ++){
             sum += mas[i];
         }
-        int middle = sum / mas.length;
+        double middle = sum / mas.length;
         System.out.println("Среднее арифметическое значение массива = " + middle);
         return middle;
     }
     //Метод для заполнения массива
-    public int[] initAndWriteMas() throws IOException {
+    public double[] initAndWriteMas() throws IOException {
         System.out.println("Введите размерность одномерного массива:");
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int lengthMas = Integer.parseInt(br.readLine());
-        int[] mas = new int[lengthMas];
+        double[] mas = new double[lengthMas];
         for(int i =0; i < lengthMas; i++){
-            mas[i] = (int)(Math.random()*100);
+            mas[i] = Math.random();
         }
         return mas;
     }
-    //Вывести значения массива в консоль
-    public void printMas(int[] mass){
+    //Вывод значения массива в консоль
+    public void printMas(double[] mass){
         for(int i =0; i < mass.length; i++){
             System.out.println(mass[i]);
         }
