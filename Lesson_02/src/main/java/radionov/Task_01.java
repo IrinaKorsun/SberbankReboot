@@ -5,16 +5,17 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Task_01 {
+    double[] mas;
     public static void main(String[] args) throws IOException {
         Task_01 t = new Task_01();
-        double[] mass = t.initAndWriteMas();
-        t.printMas(mass);
-        t.minValue(mass);
-        t.maxValue(mass);
-        t.middleValue(mass);
+        t.initAndWriteMas();
+        t.printMas();
+        t.minValue();
+        t.maxValue();
+        t.middleValue();
     }
     //Метод для определения минимального значения массива
-    public double minValue(double[] mas){
+    public double minValue(){
         double min = mas[0];
         for (double num : mas) {
             if (num < min) {
@@ -25,7 +26,7 @@ public class Task_01 {
         return min;
     }
     //Метод для определения максимального значения массива
-    public double maxValue(double[] mas){
+    public double maxValue(){
         double max = mas[0];
         for (double num : mas) {
             if (num > max) {
@@ -36,7 +37,7 @@ public class Task_01 {
         return max;
     }
     //Метод для определения среднего арифметического значения массива
-    public double middleValue(double[]mas){
+    public double middleValue(){
         double sum = 0;
         for(int i = 0; i < mas.length; i ++){
             sum += mas[i];
@@ -50,16 +51,16 @@ public class Task_01 {
         System.out.println("Введите размерность одномерного массива:");
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int lengthMas = Integer.parseInt(br.readLine());
-        double[] mas = new double[lengthMas];
+        mas = new double[lengthMas];
         for(int i =0; i < lengthMas; i++){
             mas[i] = Math.random();
         }
         return mas;
     }
     //Вывод значения массива в консоль
-    public void printMas(double[] mass){
-        for(int i =0; i < mass.length; i++){
-            System.out.println(mass[i]);
+    public void printMas(){
+        for(int i =0; i < mas.length; i++){
+            System.out.println(mas[i]);
         }
     }
 
