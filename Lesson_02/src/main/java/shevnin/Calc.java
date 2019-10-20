@@ -1,7 +1,7 @@
 package main.java.shevnin;
 
 public class Calc {
-    public static void main(String[] args) throws ArrayIndexOutOfBoundsException {
+    public static void main(String[] args) throws ArrayIndexOutOfBoundsException, NumberFormatException {
         double[] numArgs;
         numArgs = new double[3];
         try {
@@ -26,6 +26,8 @@ public class Calc {
             System.out.println(args[0] + " " + args[1] + " " + args[2] + " = " + numArgs[2]);
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("Неверный аргумент! " + e.getMessage());
-         }
+        } catch (NumberFormatException e) {
+            System.out.println("Нечисловой аргумент! " + e.getMessage());
+        }
    }
 }
