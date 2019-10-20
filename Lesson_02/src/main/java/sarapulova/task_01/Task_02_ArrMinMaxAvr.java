@@ -1,4 +1,4 @@
-package main.java.sarapulova;
+package main.java.sarapulova.task_01;
 
 import java.io.*;
 
