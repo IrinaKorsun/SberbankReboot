@@ -1,33 +1,40 @@
 package main.java.shevnin;
 
+class IllegalOperatorException  extends Exception {
+    public IllegalOperatorException(String message){
+        super(message);
+     }
+}
+
 public class Calc {
-    public static void main(String[] args) throws ArrayIndexOutOfBoundsException, NumberFormatException {
-        double[] numArgs;
-        numArgs = new double[3];
+    public static void main(String[] args) {
+        double numArg1, numArg2, numRes;
         try {
-            numArgs[0] = Double.parseDouble(args[0]);
-            numArgs[1] = Double.parseDouble(args[2]);
+            numArg1 = Double.parseDouble(args[0]);
+            numArg2 = Double.parseDouble(args[2]);
             switch (args[1]) {
                 case "+":
-                    numArgs[2] = numArgs[0] + numArgs[1];
+                    numRes = numArg1 + numArg2;
                     break;
                 case "-":
-                    numArgs[2] = numArgs[0] - numArgs[1];
+                    numRes = numArg1 - numArg2;
                     break;
                 case "/":
-                    numArgs[2] = numArgs[0] / numArgs[1];
+                    numRes = numArg1 / numArg2;
                     break;
                 case "*":
-                    numArgs[2] = numArgs[0] * numArgs[1];
+                    numRes = numArg1 * numArg2;
                     break;
                 default:
-                    throw new ArrayIndexOutOfBoundsException("Неверный оператор - \"" + args[1] + "\"");
+                    throw new IllegalOperatorException("Неверный оператор - \"" + args[1] + "\"");
             }
-            System.out.println(args[0] + " " + args[1] + " " + args[2] + " = " + numArgs[2]);
+            System.out.println(args[0] + " " + args[1] + " " + args[2] + " = " + numRes);
         } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("Неверный аргумент! " + e.getMessage());
+            System.out.println("Отсутствует параметр " + e.getMessage() + "!");
         } catch (NumberFormatException e) {
             System.out.println("Нечисловой аргумент! " + e.getMessage());
+        } catch (IllegalOperatorException e) {
+            System.out.println(e.getMessage());
         }
    }
 }
