@@ -1,5 +1,4 @@
 package main.java.yushchenko;
-import main.java.tishchenko.task_01.Array;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -9,8 +8,7 @@ public class L2_task02_yushchenko {
         String[] operArray = new String[]{"+", "-", "*", "/"};
         Scanner in = new Scanner(System.in);
         int w = 0;
-        System.out.println("Введите данные для вычисления. Для выхода из рассчета введите 'exit' вместо операции.");
-
+        System.out.println("Введите данные для вычисления. Для выхода введите 'exit' вместо операции.");
         while (w != 1) {
             System.out.print("Введите число: ");
             double x = in.nextDouble();
@@ -43,5 +41,4 @@ public class L2_task02_yushchenko {
             System.out.println("Результат: " + z);
         }
     }
-
 }

@@ -1,4 +1,5 @@
 package main.java.yushchenko;
+
 import java.util.Scanner;
 
 public class l2_task01_yushchenko {
@@ -12,17 +13,16 @@ public class l2_task01_yushchenko {
         double sum = 0;
         double avvMyArray = 0;
         System.out.println("Массив: ");
-        for (double num : myArray
-        ) {
-            num = Math.random();
-            System.out.println(num);
-            if (num < minMyArray) {
-                minMyArray = num;
+        for (int i = 0; i < myArray.length; i++) {
+            myArray[i] = Math.random();
+            System.out.println(myArray[i]);
+            if (myArray[i] < minMyArray) {
+                minMyArray = myArray[i];
             }
-            if (num > maxMyArray) {
-                maxMyArray = num;
+            if (myArray[i] > maxMyArray) {
+                maxMyArray = myArray[i];
             }
-            sum += num;
+            sum += myArray[i];
         }
         avvMyArray = sum / myArray.length;
         System.out.println("Минимум: " + minMyArray);
