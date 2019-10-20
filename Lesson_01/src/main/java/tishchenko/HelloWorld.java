@@ -1,6 +1,6 @@
-package main.java.sorokina;
+package main.java.tishchenko;
 
-public class task_01_sorokina {
+public class HelloWorld {
     public static void main(String[] args) {
         System.out.println("Hello world!!!");
     }
