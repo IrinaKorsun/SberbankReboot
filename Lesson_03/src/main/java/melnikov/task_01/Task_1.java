@@ -7,7 +7,7 @@ public class Task_1 {
         Vector v;
         int N = 10;
 
-        Vector[] vectors = Vector.generateRandomVectors( N );
+        Vector[] vectors = Vector.generateRandomVectors(N);
 
         System.out.printf("Generated vectors numbers: = %d\n", N);
         for (int i = 0; i < N; i++) {

@@ -7,7 +7,7 @@ public class Fifo<T> extends MemoryManager<T> {
     public void push(T val) {
         idx++;
         enlarge();
-        list[idx-1] = val;
+        list[idx - 1] = val;
     }
 
     public T pop() {
