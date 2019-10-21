@@ -1,4 +1,4 @@
-package main.java.nalimov;
+package main.java.nalimov.task_01;
 
 public class ArrayMinMaxAvg {
 

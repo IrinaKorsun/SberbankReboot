@@ -1,4 +1,4 @@
-package main.java.yushchenko;
+package main.java.yushchenko.task_01;
 
 import java.util.Scanner;
 
