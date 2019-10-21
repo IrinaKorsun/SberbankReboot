@@ -3,8 +3,8 @@ import java.util.Arrays;
 import java.util.stream.Stream;
 
 public class ArrRandom {
+    private static final int SZ = 40;
     public static void main(String[] args) {
-        int SZ = 40;
         System.out.println("All matches:");
         Double[] arr = Stream.generate(Math::random).limit(SZ).sorted().peek(System.out::println).toArray(Double[]::new);
         System.out.println("========");
