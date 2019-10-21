@@ -7,10 +7,10 @@ public class Task2_1MinMax {
         double[] numbers = new double[10];
         double min = 1;
         double max = 0;
-        double middle_number=0;
-        double min_middle=1;
+        double middle_number = 0;
+        double min_middle = 1;
 
-        for (int i=0; i<10; i++) {
+        for (int i = 0; i < 10; i++) {
             numbers[i] = Math.random();
             System.out.println(numbers[i]);
             if (numbers[i] < min) {
@@ -20,12 +20,11 @@ public class Task2_1MinMax {
                 max = numbers[i];
             }
         }
-        double middle = ((max-min)/2)+min;
+        double middle = ((max - min) / 2) + min;
 
-        for (int i=0; i<10; i++) {
-            if (Math.abs(numbers[i]-middle) < min_middle)
-            {
-                min_middle = Math.abs(numbers[i]-middle);
+        for (int i = 0; i < 10; i++) {
+            if (Math.abs(numbers[i] - middle) < min_middle) {
+                min_middle = Math.abs(numbers[i] - middle);
                 middle_number = numbers[i];
             }
 
@@ -35,5 +34,5 @@ public class Task2_1MinMax {
         System.out.println("Среднее значение:" + middle);
         System.out.println("Ближайшее к среднему значению число:" + middle_number);
         System.out.println("Максимальное число:" + max);
-        }
     }
+}
