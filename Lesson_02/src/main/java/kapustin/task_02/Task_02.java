@@ -1,4 +1,4 @@
-package main.java.Kapustin;
+package main.java.kapustin.task_02;
 
 import java.util.Scanner;
 

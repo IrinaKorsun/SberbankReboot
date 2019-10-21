@@ -1,4 +1,4 @@
-package main.java.radionov;
+package main.java.radionov.task_01;
 
 import java.io.BufferedReader;
 import java.io.IOException;

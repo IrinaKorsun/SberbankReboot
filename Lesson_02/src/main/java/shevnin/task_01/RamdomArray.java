@@ -1,4 +1,4 @@
-package main.java.shevnin;
+package main.java.shevnin.task_01;
 
 public class RamdomArray {
     public static void main(String[] args) {

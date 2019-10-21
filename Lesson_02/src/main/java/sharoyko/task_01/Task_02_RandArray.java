@@ -1,4 +1,4 @@
-package main.java.sharoyko.task_02;
+package main.java.sharoyko.task_01;
 
 public class Task_02_RandArray {
 
