@@ -42,12 +42,19 @@ public class Task_01_Calculator {
             // в случае если операция не найдена, будет выведено предупреждение о Некорректной операции
             // по хорошему, здесь можно использовать switch, но я по какой-то причине применил if
             // поскольку определением оператора "занимается" string, для сравнения требуется конструкция something.equals() вместо ==
-            if (operation.equals("*")){result = numberOne * numberTwo;}
-            else if (operation.equals("/")){result = numberOne / numberTwo;}
-            else if (operation.equals("-")){result = numberOne - numberTwo;}
-            else if (operation.equals("+")){result = numberOne + numberTwo;}
-            else if (operation.equals("%")){result = numberOne % numberTwo;}
-            else{System.out.println("Некорректная операция");}
+            if (operation.equals("*")) {
+                result = numberOne * numberTwo;
+            } else if (operation.equals("/")) {
+                result = numberOne / numberTwo;
+            } else if (operation.equals("-")) {
+                result = numberOne - numberTwo;
+            } else if (operation.equals("+")) {
+                result = numberOne + numberTwo;
+            } else if (operation.equals("%")) {
+                result = numberOne % numberTwo;
+            } else {
+                System.out.println("Некорректная операция");
+            }
 
             //выводим результат в консоль
             System.out.println("Результат: " + result);
