@@ -1,4 +1,4 @@
-package main.java.polenok.task_01;
+package polenok.task_01;
 
 import static java.lang.Math.random;
 

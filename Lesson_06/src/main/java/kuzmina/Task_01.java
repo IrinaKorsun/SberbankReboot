@@ -1,4 +1,4 @@
-package kuzmina.task_01;
+package kuzmina;
 
 public class Task_01 {
 }

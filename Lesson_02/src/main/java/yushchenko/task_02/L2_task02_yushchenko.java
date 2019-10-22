@@ -1,4 +1,4 @@
-package main.java.yushchenko.task_02;
+package yushchenko.task_02;
 
 import java.util.Arrays;
 import java.util.Scanner;

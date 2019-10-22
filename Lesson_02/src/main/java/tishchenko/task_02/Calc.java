@@ -1,4 +1,4 @@
-package main.java.tishchenko.task_02;
+package tishchenko.task_02;
 
 import java.util.Scanner;
 

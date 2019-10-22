@@ -1,4 +1,4 @@
-package main.java.chernoskutov.task_01;
+package chernoskutov.task_01;
 import java.util.Arrays;
 import java.util.stream.Stream;
 

@@ -1,4 +1,4 @@
-package main.java.shevnin;
+package shevnin;
 
 class IllegalOperatorException  extends Exception {
     public IllegalOperatorException(String message){

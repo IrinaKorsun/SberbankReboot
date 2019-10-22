@@ -1,4 +1,4 @@
-package main.java.tishchenko.task_01;
+package tishchenko.task_01;
 import java.util.Arrays;
 
 public class Array {

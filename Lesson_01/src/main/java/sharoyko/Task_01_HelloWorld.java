@@ -1,4 +1,4 @@
-package main.java.sharoyko;
+package sharoyko;
 
 public class Task_01_HelloWorld {
     public static void main(String[] args) {

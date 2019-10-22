@@ -1,4 +1,4 @@
-package main.java.sarapulova;
+package sarapulova;
 
 public class HelloWord {
     public static void main(String[] args) {

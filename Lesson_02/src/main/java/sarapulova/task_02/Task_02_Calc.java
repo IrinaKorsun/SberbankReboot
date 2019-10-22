@@ -1,4 +1,4 @@
-package main.java.sarapulova.task_02;
+package sarapulova.task_02;
 
 import java.util.Scanner;
 

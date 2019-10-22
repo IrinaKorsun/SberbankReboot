@@ -1,4 +1,4 @@
-package main.java.Ostrikova.task_02;
+package Ostrikova.task_02;
 
 import java.util.Scanner;
 

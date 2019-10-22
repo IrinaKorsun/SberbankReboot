@@ -1,4 +1,4 @@
-package main.java.radionov.task_02;
+package radionov.task_02;
 
 import java.util.Scanner;
 

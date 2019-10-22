@@ -1,4 +1,4 @@
-package main.java.galliamov.task_02;
+package galliamov.task_02;
 
 import java.util.Scanner;
 

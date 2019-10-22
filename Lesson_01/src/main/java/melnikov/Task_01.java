@@ -1,4 +1,4 @@
-package main.java.melnikov;
+package melnikov;
 
 public class Task_01 {
     public static void main(String[] args) {

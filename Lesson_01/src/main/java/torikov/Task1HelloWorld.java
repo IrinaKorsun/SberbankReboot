@@ -1,4 +1,4 @@
-package main.java.torikov;
+package torikov;
 
 public class Task1HelloWorld {
     public static void main(String[] args) {

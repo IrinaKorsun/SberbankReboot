@@ -1,4 +1,4 @@
-package main.java.galliamov.task_01;
+package galliamov.task_01;
 
 public class Array {
     public static void main(String[] args) {

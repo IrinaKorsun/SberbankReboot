@@ -1,4 +1,4 @@
-package main.java.polenok.task_02;
+package polenok.task_02;
 
 import java.util.Scanner;
 

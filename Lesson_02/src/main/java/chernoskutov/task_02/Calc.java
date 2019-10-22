@@ -1,4 +1,4 @@
-package main.java.chernoskutov.task_02;
+package chernoskutov.task_02;
 
 import java.util.Scanner;
 /**

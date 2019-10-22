@@ -1,4 +1,4 @@
-package main.java.kuzmina;
+package kuzmina;
 
 public class Task_01 {
 

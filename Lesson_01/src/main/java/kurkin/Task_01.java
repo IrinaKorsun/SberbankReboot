@@ -1,4 +1,4 @@
-package main.java.kurkin;
+package kurkin;
 
 public class Task_01 {
     public static void main(String[] args) {
