@@ -19,7 +19,6 @@ public class Calc {
             if (action.equals("exit")) {
                 break;
             }
-            ;
             System.out.print("Enter SecondNumber: ");
             secondNumb = scanner.nextInt();
             secondNumbDouble = (double) secondNumb;
