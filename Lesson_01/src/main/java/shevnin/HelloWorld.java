@@ -1,4 +1,4 @@
-package main.java.shevnin;
+package shevnin;
 
 public class HelloWorld {
     public static void main(String[] args) {

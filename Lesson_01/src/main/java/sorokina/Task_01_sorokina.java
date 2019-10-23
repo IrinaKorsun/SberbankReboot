@@ -1,4 +1,4 @@
-package main.java.sorokina;
+package sorokina;
 
 public class Task_01_sorokina {
     public static void main(String[] args) {
