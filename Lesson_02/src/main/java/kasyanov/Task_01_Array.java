@@ -1,4 +1,4 @@
-package main.java.kasyanov;
+package kasyanov;
 
 import java.util.Scanner;
 
