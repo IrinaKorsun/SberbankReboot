@@ -2,6 +2,9 @@ package ostrikova;
 
 import jdk.nashorn.internal.ir.ContinueNode;
 
+
+import jdk.nashorn.internal.ir.ContinueNode;
+
 import java.util.Scanner;
 
 class Vector {
@@ -16,18 +19,15 @@ class Vector {
     }
 
     double lengthVec() {
-        double ln = Math.sqrt(x * x + y * y + z * z); //вычисляем длину вектора
-        return ln;
+        return Math.sqrt(x * x + y * y + z * z); //вычисляем длину вектора;
     }
 
     double scalPr(double x1, double y1, double z1){
-        double sp=x*x1+y*y1+z*z1; // вычисляем скалярное произведение
-        return sp;
+        return x*x1+y*y1+z*z1; // вычисляем скалярное произведение;
     }
 
     double cortVect(double sp, double l, double l1) {
-        double cv=sp/(l*l1);
-        return cv;
+        return sp/(l*l1);
     }
 
     double [] vectPr(double x1, double y1, double z1){
@@ -113,8 +113,5 @@ class Vector {
         }
 
         double [][]masOne=one.mas();
-        //System.out.println("Новый массив векторов: "+masOne);
-        System.out.println();
     }
 }
-
