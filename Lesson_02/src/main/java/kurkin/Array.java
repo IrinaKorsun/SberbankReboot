@@ -2,7 +2,7 @@ package main.java.Kurkin;
 import java.util.Arrays;
 import java.util.Random;
 
-public class array {
+public class Array {
 
     private static void print(int[] p_numbers) {
         for(int i = 0; i < p_numbers.length; i++){

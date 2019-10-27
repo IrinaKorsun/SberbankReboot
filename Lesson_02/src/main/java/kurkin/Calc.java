@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class calc {
+public class Calc {
 
     private static float version = 1.0F;
     private static Scanner scanner = new Scanner(System.in);
