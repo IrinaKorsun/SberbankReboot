@@ -1,4 +1,4 @@
-package kurkin;
+package kurkin.task_01;
 
 public class task_01 {
 
