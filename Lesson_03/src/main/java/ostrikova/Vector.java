@@ -1,10 +1,5 @@
 package ostrikova;
 
-import jdk.nashorn.internal.ir.ContinueNode;
-
-
-import jdk.nashorn.internal.ir.ContinueNode;
-
 import java.util.Scanner;
 
 class Vector {
