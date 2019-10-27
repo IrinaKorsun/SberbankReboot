@@ -66,7 +66,7 @@ class Stack {
         Stack st=new Stack();
 
         System.out.println("Добавляем элемент в стек");
-        for (int i=12; i<23; i++){
+        for (int i=12; i<=21; i++){
             st.Push(i);
             st.remove();}
 
