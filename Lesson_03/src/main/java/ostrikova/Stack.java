@@ -66,28 +66,9 @@ class Stack {
         Stack st=new Stack();
 
         System.out.println("Добавляем элемент в стек");
-
-        st.Push(12);
-        st.remove();
-        st.Push(13);
-        st.remove();
-        st.Push(14);
-        st.remove();
-        st.Push(14);
-        st.remove();
-        st.Push(15);
-        st.remove();
-        st.Push(16);
-        st.remove();
-        st.Push(17);
-        st.remove();
-        st.Push(18);
-        st.remove();
-        st.Push(19);
-        st.remove();
-        st.Push(20);
-        st.remove();
-        st.Push(100);
+        for (int i=12; i<23; i++){
+            st.Push(i);
+            st.remove();}
 
         System.out.println("Удаляем элемент из стека");
         st.Pop();
