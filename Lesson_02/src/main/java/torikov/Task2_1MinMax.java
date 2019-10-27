@@ -1,4 +1,4 @@
-package main.java.torikov;
+package torikov;
 
 public class Task2_1MinMax {
 
