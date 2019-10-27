@@ -1,11 +1,11 @@
 package sarapulova.task_02;
 
 public class Stack {
-    private int arrSize;
-    private int[] arrStack;
-    private int topStack;
+    int arrSize;
+    int[] arrStack;
+    int topStack;
 
-    private Stack(int cnt) {
+    Stack(int cnt) {
         arrSize = cnt;
         arrStack = new int[arrSize];
         topStack = -1;
@@ -27,7 +27,6 @@ public class Stack {
         return arrStack[topStack--];
     }
 
-
     public static void main(String[] args) {
         Stack mStack = new Stack(5);
         int value;
@@ -44,8 +43,5 @@ public class Stack {
             value = mStack.Pop();
             System.out.print(value + "\n");
         }
-
     }
-
-
 }
