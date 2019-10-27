@@ -7,7 +7,7 @@ public class Queue {
 
     private TRecord head, tail;
 
-    Queue(){
+    Queue() {
         head = new TRecord();
         tail = new TRecord();
     }
