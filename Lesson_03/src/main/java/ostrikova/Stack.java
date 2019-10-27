@@ -1,39 +1,35 @@
 package ostrikova;
 
 class Stack {
-    int size=10; //максимальный размер очереди
-    int[] array=new int [size];
-    int top=0;
-    int n=0; //текущее количество элементов в стеке
+    int size = 10; //максимальный размер очереди
+    int[] array = new int[size];
+    int top = 0;
+    int n = 0; //текущее количество элементов в стеке
 
-    public boolean empty(){ //проверка есть ли в стеке элементы
-        if (n==0){
+    public boolean empty() { //проверка есть ли в стеке элементы
+        if (n == 0) {
             return true;
-        }
-        else{
+        } else {
             return false;
         }
     }
 
-    public boolean full(){ //проверка заполнен ли стек
-        if (n==size){
+    public boolean full() { //проверка заполнен ли стек
+        if (n == size) {
             return true;
-        }
-        else{
+        } else {
             return false;
         }
     }
 
-    public void Push (int nNext) { //добавляем элемент в стек
-        if (empty()==true){
+    public void Push(int nNext) { //добавляем элемент в стек
+        if (empty() == true) {
             n++;
-            array [top]=nNext;
+            array[top] = nNext;
             top++;
-        }
-        else if(full()==true) {
+        } else if (full() == true) {
             System.out.println("Стек заполнен. Чтобы добавить новый элемента необходимо удалить существующий элемент из стека");
-        }
-        else {
+        } else {
             array[top] = nNext;
             n++;
             top++;
@@ -42,11 +38,10 @@ class Stack {
         }
     }
 
-    public void Pop () { //удаляем элемент из стека
-        if (empty()==true){
+    public void Pop() { //удаляем элемент из стека
+        if (empty() == true) {
             System.out.println("Стек не содержит элементов");
-        }
-        else {
+        } else {
             top--;
             n--;
             array[top] = 0;
@@ -54,21 +49,22 @@ class Stack {
         }
     }
 
-    public void remove(){ //вывод стека на консоль
+    public void remove() { //вывод стека на консоль
         System.out.println("Получаем стек: ");
-        for (int i=0; i<array.length; i++) {
-            System.out.print(array[i] +" ");
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + " ");
         }
     }
 
 
     public static void main(String[] args) {
-        Stack st=new Stack();
+        Stack st = new Stack();
 
         System.out.println("Добавляем элемент в стек");
-        for (int i=12; i<=21; i++){
+        for (int i = 12; i <= 21; i++) {
             st.Push(i);
-            st.remove();}
+            st.remove();
+        }
 
         System.out.println("Удаляем элемент из стека");
         st.Pop();
