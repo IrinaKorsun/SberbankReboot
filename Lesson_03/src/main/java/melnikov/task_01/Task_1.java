@@ -5,12 +5,12 @@ public class Task_1 {
     public static void main(String[] args) {
 
         Vector v;
-        int N = 10;
+        int n = 10;
 
-        Vector[] vectors = Vector.generateRandomVectors(N);
+        Vector[] vectors = Vector.generateRandomVectors(n);
 
-        System.out.printf("Generated vectors numbers: = %d\n", N);
-        for (int i = 0; i < N; i++) {
+        System.out.printf("Generated vectors numbers: = %d\n", n);
+        for (int i = 0; i < n; i++) {
             System.out.printf("Vector[%d] = { %f, %f, %f }\n", i, vectors[i].getX(), vectors[i].getY(), vectors[i].getZ());
         }
 
