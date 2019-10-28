@@ -4,8 +4,8 @@ import java.util.Scanner;
 public class Task_02_Simple_Calc {
     static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
-        Calculate();
-        Quit();
+        calculate();
+        quit();
     }
     public static double getDouble(){
         double num;
@@ -58,7 +58,7 @@ public class Task_02_Simple_Calc {
         }
         return result;
     }
-    public static void Calculate(){
+    public static void calculate(){
         System.out.println("Enter the first number:");
         double first = getDouble();
         System.out.println("Enter the second number:");
@@ -68,18 +68,20 @@ public class Task_02_Simple_Calc {
         double result = calc(first,operation,second);
         System.out.println("Result of calculation "+ first + operation + second +" = " + result);
     }
-    public static void Quit(){
+    public static void quit(){
         System.out.println("Enter S to start over or Q to quit");
         switch (sc.next().toLowerCase().charAt(0)) {
             case ('q'): {
                 System.exit(0);
             }
             case ('s'): {
-                Calculate();
+                calculate();
+                quit();
+                break;
             }
             default:
                 System.out.println("Symbol doesn't support");
-                Quit();
+                quit();
         }
     }
 }
