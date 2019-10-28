@@ -22,11 +22,13 @@ class Stek {
     }
 
     public void printStek() {
-        String forPrint = new String("Массив: (");
+        StringBuilder forPrint = new StringBuilder("Массив: (");
         for (int i = 0; i < (arr.length - 1); i++) {
-            forPrint += arr[i] + ",";
+            forPrint.append(arr[i]);
+            forPrint.append(",");
         }
-        forPrint += arr[arr.length - 1] + ")";
+        forPrint.append(arr[arr.length - 1]);
+        forPrint.append(")");
         System.out.println(forPrint);
     }
 }
