@@ -1,4 +1,4 @@
-package Okan.task_01;
+package Okan.task_02;
 
 import java.util.Scanner;
 

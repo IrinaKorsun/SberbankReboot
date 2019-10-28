@@ -1,4 +1,4 @@
-package Okan.task_01;
+package Okan.task_02;
 
 public class Calc {
     public static void main(String[] args) {
