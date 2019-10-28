@@ -1,35 +1,30 @@
 package tishchenko.Task02;
 
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
         LIFO Lifo = new LIFO();
         System.out.println("\nРабота со Стеком!\n");
         System.out.println("Заполнение стека");
-        Lifo.FillStack(5);
-        Lifo.PrintStack();
-        Lifo.Push(10);
+        Lifo.fillStack(5);
+        Lifo.printStack();
+        Lifo.push(10);
         System.out.println("Новый вид стека :");
-        Lifo.PrintStack();
-        Lifo.Pop();
+        Lifo.printStack();
+        Lifo.pop();
         System.out.println("Новый вид стека :");
-        Lifo.PrintStack();
+        Lifo.printStack();
         System.out.println("\nРабота с очередью!\n");
         FIFO Fifo = new FIFO();
         System.out.println("Заполнение очереди");
-        Fifo.FillQueue(7);
+        Fifo.fillQueue(7);
         System.out.println("Новый вид очереди:");
-        Fifo.PrintQueue();
-        Fifo.Push(12);
+        Fifo.printQueue();
+        Fifo.push(12);
         System.out.println("Новый вид очереди:");
-        Fifo.PrintQueue();
-        Fifo.Pop();
+        Fifo.printQueue();
+        Fifo.pop();
         System.out.println("Новый вид очереди:");
-        Fifo.PrintQueue();
-
-
+        Fifo.printQueue();
     }
-
 }
 
