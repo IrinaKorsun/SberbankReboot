@@ -1,6 +1,6 @@
 package radionov.task_05;
 
-public class Singleton {
+public class TestSingleton {
     public static void main(String[] args) {
         Sun sun1 = Sun.getInstance();
         Sun sun2 = Sun.getInstance();
