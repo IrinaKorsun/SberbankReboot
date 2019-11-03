@@ -1,4 +1,4 @@
-package main.java.melnikov.task_02;
+package melnikov.task_02;
 
 public class Task_2 {
     public static void main(String[] args) {

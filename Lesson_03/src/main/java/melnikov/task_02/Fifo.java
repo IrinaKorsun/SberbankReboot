@@ -1,4 +1,6 @@
-package main.java.melnikov.task_02;
+package melnikov.task_02;
+
+import melnikov.task_02.MemoryManager;
 
 public class Fifo<T> extends MemoryManager<T> {
 

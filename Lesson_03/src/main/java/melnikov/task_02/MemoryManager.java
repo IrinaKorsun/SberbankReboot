@@ -1,4 +1,4 @@
-package main.java.melnikov.task_02;
+package melnikov.task_02;
 
 import java.util.Arrays;
 
