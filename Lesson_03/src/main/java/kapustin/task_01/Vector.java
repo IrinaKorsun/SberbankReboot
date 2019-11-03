@@ -1,4 +1,4 @@
-package ru.sberbank.Task_03;
+package kapustin.task_01;
 
 import java.util.Random;
 
