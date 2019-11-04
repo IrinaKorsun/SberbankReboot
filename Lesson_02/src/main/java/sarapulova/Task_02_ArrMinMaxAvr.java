@@ -1,4 +1,4 @@
-package sarapulova.task_01;
+package sarapulova;
 
 import java.io.*;
 
