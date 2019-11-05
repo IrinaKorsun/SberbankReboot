@@ -5,6 +5,7 @@ public class Pig extends Animals{
         super(p_sName);
     }
 
+    @Override
     public void vote(){
         System.out.println("Хрю Хрю (Свинья " + getName() + ")");
     }

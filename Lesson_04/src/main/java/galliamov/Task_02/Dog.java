@@ -5,6 +5,7 @@ public class Dog extends Animals {
         super(p_sName);
     }
 
+    @Override
     public void vote(){
         System.out.println("Гав Гав Гав (Собака " + getName() + ")");
     }

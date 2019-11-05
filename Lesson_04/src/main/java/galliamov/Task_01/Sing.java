@@ -2,17 +2,17 @@ package galliamov.Task_01;
 
 public class Sing {
     private static Sing rExemp;
-    protected int Value;
+    protected int iValue;
 
     private Sing (int p_iNem) {
-        Value = p_iNem;
+        iValue = p_iNem;
     }
 
     private int getValue(){
-        return Value;
+        return iValue;
     }
 
-    public static synchronized Sing setExcem(int p_iExem) {
+    public static Sing setExcem(int p_iExem) {
         if (rExemp == null) {
             rExemp = new Sing(p_iExem);
         }
@@ -20,8 +20,8 @@ public class Sing {
         return rExemp;
     }
 
-    public static synchronized int getExcem() {
-         return rExemp.getValue();
+    public static int getExcem() {
+        return rExemp.getValue();
     }
 
 }

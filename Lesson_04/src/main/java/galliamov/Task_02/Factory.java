@@ -1,7 +1,7 @@
 package galliamov.Task_02;
 
 public class Factory {
-    public static Animals GetAnimal(String p_sAnimal, String p_sName){
+    public static Animals getAnimal(String p_sAnimal, String p_sName){
         switch (p_sAnimal){
             case ("Собака"):
                 return new Dog(p_sName);

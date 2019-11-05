@@ -5,6 +5,7 @@ public class Cat extends Animals {
         super(p_sName);
     }
 
+    @Override
     public void vote(){
         System.out.println("Мяу Мяу Мяу (Кошка " + getName() + ")");
     }
