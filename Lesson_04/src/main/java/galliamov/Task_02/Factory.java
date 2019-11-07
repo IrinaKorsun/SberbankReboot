@@ -1,15 +1,15 @@
 package galliamov.Task_02;
 
 public class Factory {
-    public static Animals getAnimal(String p_sAnimal, String p_sName){
+    public static Animals getAnimal(Select p_sAnimal, String p_sName){
         switch (p_sAnimal){
-            case ("Собака"):
+            case СОБАКА:
                 return new Dog(p_sName);
-            case ("Кошка"):
+            case КОШКА:
                 return new Cat(p_sName);
-            case ("Свинья"):
+            case СВИНЬЯ:
                 return new Pig(p_sName);
-        }
+         }
         return new Pig(p_sName);
     }
 }
