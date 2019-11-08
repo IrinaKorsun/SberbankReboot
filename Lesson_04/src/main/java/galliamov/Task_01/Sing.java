@@ -12,12 +12,14 @@ public class Sing {
         return iValue;
     }
 
-    public static Sing setExcem(int p_iExem) {
+    public static void setExcem(int p_iExem) {
         if (rExemp == null) {
             rExemp = new Sing(p_iExem);
+        }else{
+            rExemp.iValue = p_iExem;
         }
 
-        return rExemp;
+        return;
     }
 
     public static int getExcem() {
