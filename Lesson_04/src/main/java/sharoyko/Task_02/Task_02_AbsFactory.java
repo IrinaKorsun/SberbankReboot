@@ -8,27 +8,25 @@ abstract class Units {
     String name;
 }
 
-//создаем интерфейс для Юнита-лучника
-interface ArcherUnit {
-    void getInfo();
-}
+//создаем общий интерфейс для Юнитов
 
-//создаем интерфейс для Юнита-волшебника
-interface WizardUnit {
+interface UnitsOptions {
     void getInfo();
 }
 
 //создаем интерфейс фабрики
 interface InterUnitFactory {
-    ArcherUnit getArcher();
+    //ArcherUnit getArcher();
+    UnitsOptions getArcher();
 
-    WizardUnit getWizard();
+    //WizardUnit getWizard();
+    UnitsOptions getWizard();
 }
 
 //создаем класс лучника, расширяем его за счет абстрактного класса Юниты и интерфейса Юнит-лучник
 //переопределяем стандартный конструктор
 //переопределяем метод getInfo
-class Archer extends Units implements ArcherUnit {
+class Archer extends Units implements UnitsOptions {
     Archer() {
         this.hp = 10;
         this.damage = 5;
@@ -43,7 +41,7 @@ class Archer extends Units implements ArcherUnit {
 //создаем класс волшебника, расширяем его за счет абстрактного класса Юниты и интерфейса Юнит-волшебник
 //переопределяем стандартный конструктор
 //переопределяем метод getInfo
-class Wizard extends Units implements WizardUnit {
+class Wizard extends Units implements UnitsOptions {
     Wizard() {
         this.hp = 15;
         this.damage = 8;
@@ -59,11 +57,11 @@ class Wizard extends Units implements WizardUnit {
 //переопределяем методы полученные от интерфейса, возвращаем необходимые нам данные
 class UnitsFactory implements InterUnitFactory {
 
-    public ArcherUnit getArcher() {
+    public UnitsOptions getArcher() {
         return new Archer();
     }
 
-    public WizardUnit getWizard() {
+    public UnitsOptions getWizard() {
         return new Wizard();
     }
 }
@@ -75,11 +73,11 @@ public class Task_02_AbsFactory {
         //погружаем в такую переменную новый объект фабрики
         factory = new UnitsFactory();
         //создаем объект - лучник
-        ArcherUnit archer = factory.getArcher();
+        UnitsOptions archer = factory.getArcher();
         //вызываем метод лучника
         archer.getInfo();
         //создаем объект - волшебник
-        WizardUnit wizard = factory.getWizard();
+        UnitsOptions wizard = factory.getWizard();
         //вызываем метод волшебника
         wizard.getInfo();
     }
