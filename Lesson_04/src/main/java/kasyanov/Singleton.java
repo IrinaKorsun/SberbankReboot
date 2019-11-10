@@ -3,7 +3,7 @@ package kasyanov;
 public final class Singleton {
 
         private static Singleton instance;
-        public String value;
+        private String value;
 
         private Singleton(String value) {
             // Этот код эмулирует медленную инициализацию.
@@ -15,7 +15,7 @@ public final class Singleton {
             this.value = value;
         }
 
-        public static Singleton getInstance(String value) {
+        private static Singleton getInstance(String value) {
             if (instance == null) {
                 instance = new Singleton(value);
             }
