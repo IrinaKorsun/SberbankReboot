@@ -5,21 +5,21 @@ public class defMovies {
         void watch();
     }
 
-    public class horror implements Movies {
+    public class Horror implements Movies {
         @Override
         public void watch() {
             System.out.println("Вы смотрите horor фильм");
         }
     }
 
-    public class science implements Movies {
+    public class Science implements Movies {
         @Override
         public void watch() {
             System.out.println("Вы смотрите science фильм");
         }
     }
 
-    public class romantic implements Movies {
+    public class Romantic implements Movies {
         @Override
         public void watch() {
             System.out.println("Вы смотрите romantic фильм");
@@ -36,13 +36,13 @@ public class defMovies {
         Movies toReturn = null;
         switch (type) {
             case HORROR:
-                toReturn = new horror();
+                toReturn = new Horror();
                 break;
             case SCIENCE:
-                toReturn = new science();
+                toReturn = new Science();
                 break;
             case ROMANTIC:
-                toReturn = new romantic();
+                toReturn = new Romantic();
                 break;
             default:
                 throw new IllegalArgumentException("Не верный жанр:" + type);
@@ -64,3 +64,4 @@ public class defMovies {
         }
 
     }
+}
