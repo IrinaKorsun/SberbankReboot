@@ -1,4 +1,4 @@
-package main.java.Kurkin;
+package kurkin;
 
 import java.util.Scanner;
 import java.util.regex.Matcher;
