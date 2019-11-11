@@ -1,5 +1,4 @@
 package ostrikova;
-
 import java.util.Scanner;
 
 class Vector {
