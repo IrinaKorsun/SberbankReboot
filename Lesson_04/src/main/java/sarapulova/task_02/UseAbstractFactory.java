@@ -17,18 +17,18 @@ public class UseAbstractFactory {
         switch (selVariant) {
             case '1':
                 factory = new MortgageFactory();
-                AskZalog(factory, scan);
+                askGuaranty(factory, scan);
                 break;
             case '2':
                 factory = new CarLoanFactory();
-                AskZalog(factory, scan);
+                askGuaranty(factory, scan);
                 break;
             default:
                 System.out.print("Некорректный символ\n\n");
         }
     }
 
-    private static void AskZalog(CreditDocFactory factory, Scanner scan) {
+    private static void askGuaranty(CreditDocFactory factory, Scanner scan) {
         char selVariant;
 
         if (factory != null) {
@@ -38,16 +38,17 @@ public class UseAbstractFactory {
             System.out.print("Введите номер: ");
             selVariant = scan.next().charAt(0);
 
-            switch (selVariant) {
-                case '1':
-                    factory.createZalog();
-                    break;
-                case '2':
-                    factory.craeteDogovor();
-                    break;
-                default:
-                    System.out.print("Некорректный символ\n\n");
-            }
+            factory.createDoc(selVariant);
+//            switch (selVariant) {
+//                case '1':
+//                    factory.createZalog();
+//                    break;
+//                case '2':
+//                    factory.craeteDogovor();
+//                    break;
+//                default:
+//                    System.out.print("Некорректный символ\n\n");
+//            }
         }
     }
 }
