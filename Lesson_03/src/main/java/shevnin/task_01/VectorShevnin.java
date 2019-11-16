@@ -2,11 +2,11 @@ package shevnin.task_01;
 
 import static java.lang.System.*;
 
-public class Vector_shevnin {
-    double x, y, z;
+public class VectorShevnin {
+    private double x, y, z;
 
     // конструктор вектора
-    public Vector_shevnin(double x, double y, double z) {
+    public VectorShevnin(double x, double y, double z) {
         this.x = x;
         this.y = y;
         this.z = z;
@@ -18,13 +18,13 @@ public class Vector_shevnin {
     }
 
     // скалярное произведение вектора this на вектор secondVector
-    public double scalarProduct(Vector_shevnin secondVector) {
+    public double scalarProduct(VectorShevnin secondVector) {
         return this.x*secondVector.x + this.y*secondVector.y + this.z*secondVector.z;
     }
 
     // векторное произведение вектора this на вектор secondVector
-    public Vector_shevnin vectorProduct(Vector_shevnin secondVector) {
-       return new Vector_shevnin(
+    public VectorShevnin vectorProduct(VectorShevnin secondVector) {
+       return new VectorShevnin(
                 this.y * secondVector.z - this.z * secondVector.y
                 , this.z * secondVector.x - this.x * secondVector.z
                 , this.x * secondVector.y - this.y * secondVector.x
@@ -32,13 +32,13 @@ public class Vector_shevnin {
     }
 
     // косинус улга между вектором this и вектором secondVector
-    public double vectorAngle(Vector_shevnin secondVector) {
+    public double vectorAngle(VectorShevnin secondVector) {
         return this.scalarProduct(secondVector) / this.length() / secondVector.length();
     }
 
     // сумма вектора this и вектора secondVector
-    public Vector_shevnin vectorSum(Vector_shevnin secondVector) {
-        return new Vector_shevnin(
+    public VectorShevnin vectorSum(VectorShevnin secondVector) {
+        return new VectorShevnin(
                 this.x + secondVector.x
                 ,this.y + secondVector.y
                 ,this.z + secondVector.z
@@ -46,8 +46,8 @@ public class Vector_shevnin {
     }
 
     // разность векторов this и secondVector
-    public Vector_shevnin vectorDiff(Vector_shevnin secondVector) {
-        return new Vector_shevnin(
+    public VectorShevnin vectorDiff(VectorShevnin secondVector) {
+        return new VectorShevnin(
                 this.x - secondVector.x
                 ,this.y - secondVector.y
                 ,this.z - secondVector.z
@@ -59,9 +59,9 @@ public class Vector_shevnin {
         try {
             int vectorCount = Integer.parseInt(args[0]);
             out.println("Количество векторов = " + vectorCount);
-            Vector_shevnin[] vectorArr = new Vector_shevnin[vectorCount+4];
+            VectorShevnin[] vectorArr = new VectorShevnin[vectorCount+4];
             for (int i = 0; i < vectorCount; i++) {
-                 vectorArr[i] = new Vector_shevnin(Math.random(),Math.random(),Math.random());
+                 vectorArr[i] = new VectorShevnin(Math.random(),Math.random(),Math.random());
                 out.println("vector["+i+"] = ("+vectorArr[i].x+",\t"+vectorArr[i].y+",\t"+vectorArr[i].z+"),\t length = "+vectorArr[i].length());
             }
             if (vectorCount > 1) {
