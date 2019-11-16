@@ -1,6 +1,6 @@
 package melnikov;
 
-interface Figures {
+interface FiguresFactory {
     Triangle createTriangle();
     Quad createQuad();
     Circle createCircle();

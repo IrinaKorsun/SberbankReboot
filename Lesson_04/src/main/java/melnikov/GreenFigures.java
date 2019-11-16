@@ -1,6 +1,6 @@
 package melnikov;
 
-public class GreenFigures implements Figures {
+public class GreenFigures implements FiguresFactory {
     @Override
     public Triangle createTriangle() {
         return new GreenTriangle();
