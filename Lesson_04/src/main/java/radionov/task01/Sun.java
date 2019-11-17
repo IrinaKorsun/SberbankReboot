@@ -1,4 +1,4 @@
-package radionov;
+package radionov.task01;
 
 public class Sun {
     private static Sun instance;

@@ -1,4 +1,4 @@
-package radionov;
+package radionov.task01;
 
 public class TestSingletone {
     public static void main(String[] args) {
