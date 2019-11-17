@@ -1,4 +1,4 @@
-package kasyanov;
+package kasyanov.task_01;
 
 public final class Singleton {
 
