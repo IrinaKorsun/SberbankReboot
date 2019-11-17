@@ -1,9 +1,7 @@
 package shevnin;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.List;
+import java.sql.Time;
+import java.util.*;
 
 public class ShevninFindDuplicates {
     //Преобразование byte-массива в строку
@@ -45,20 +43,22 @@ public class ShevninFindDuplicates {
 
     public static void main(String[] args) {
         int counter = 0;
-        System.out.println("FindDuplicates");
+         System.out.println("FindDuplicates");
 
+        Long lostTime = System.currentTimeMillis();
         Collection<ShevninUserSber> collA = new ArrayList<>();
         for (int i = 0; i < 100_000; i++) collA.add(new ShevninUserSber(genString(3), genByteArr(2)));
-        System.out.println("Generate collA size = " + collA.size());
+        System.out.println("Generate collA size = " + collA.size() + "; " + (System.currentTimeMillis() - lostTime) + " milisec.");
 
         Collection<ShevninUserSber> collB = new ArrayList<>();
         for (int i = 0; i < 100_000; i++) collB.add(new ShevninUserSber(genString(3), genByteArr(2)));
-        System.out.println("Generate collB size = " + collB.size());
-
+        System.out.println("Generate collB size = " + collB.size() + "; " + (System.currentTimeMillis() - lostTime) + " milisec.");
+        lostTime = System.currentTimeMillis();
         List<ShevninUserSber> doubles = findDuplicates(collA, collB);
+        lostTime = System.currentTimeMillis() - lostTime;
         System.out.println("Found doubles: ");
-        for (ShevninUserSber instance : doubles) {
+        for (ShevninUserSber instance : doubles)
             System.out.println(++counter + ": Username = " + instance.getUsername() + "; Email = " + instance.getEmail() + "; PasswordHash = " + byteToString(instance.getPasswordHash()));
-        }
+        System.out.println("Lost Time : " + lostTime + " milisec.");
     }
 }
