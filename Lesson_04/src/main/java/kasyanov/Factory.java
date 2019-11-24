@@ -106,7 +106,7 @@ public class Factory {
 
     // ************************************************************************
     public static void main(String[] args) {
-        createCharacter(ElfCharacterFactory);
+      //  createCharacter(ElfCharacterFactory);
 
     }
     // ************************************************************************
