@@ -11,16 +11,12 @@ public class Factory {
         Mage mage = myfactory.createMage();
         Archer archer = myfactory.createArcher();
         Warrior warrior = myfactory.createWarrior();
+        // Метод ничего не возвращает
     }
 
     public static void main(String[] args) {
         ElfCharacterFactory fact = new ElfCharacterFactory();
         createCharacter(fact);
-
-        //HumanCharacterFactory fact2 = new HumanCharacterFactory();
-        //createCharacter(fact);
-
-
     }
 }
 
