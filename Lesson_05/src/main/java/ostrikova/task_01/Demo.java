@@ -59,7 +59,7 @@ public class Demo {
     }
 
     //мой метод =метод 2
-    public static List<UserSber> findDuplicates2 (ArrayList <UserSber> coll1, ArrayList <UserSber> coll2){
+    private static List<UserSber> findDuplicates2 (ArrayList <UserSber> coll1, ArrayList <UserSber> coll2){
         List<UserSber> duplicates2=new ArrayList<>();           //коллекция для дублей
         ArrayList <UserSber> allElem=new ArrayList<>();     //создаём новую коллекцию, где будут объеденены две коллекции
         long start = System.currentTimeMillis();
