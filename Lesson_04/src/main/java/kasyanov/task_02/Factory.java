@@ -1,8 +1,6 @@
 package kasyanov.task_02;
 
-import kasyanov.task_02.entities.Archer;
-import kasyanov.task_02.entities.Mage;
-import kasyanov.task_02.entities.Warrior;
+import kasyanov.task_02.entities.*;
 import kasyanov.task_02.factory.CharacterFactory;
 import kasyanov.task_02.factory.ElfCharacterFactory;
 
@@ -18,6 +16,11 @@ public class Factory {
     public static void main(String[] args) {
         ElfCharacterFactory fact = new ElfCharacterFactory();
         createCharacter(fact);
+
+        //HumanCharacterFactory fact2 = new HumanCharacterFactory();
+        //createCharacter(fact);
+
+
     }
 }
 
