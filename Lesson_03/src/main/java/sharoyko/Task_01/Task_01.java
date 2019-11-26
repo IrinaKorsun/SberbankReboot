@@ -1,4 +1,4 @@
-package main.java.sharoyko.Task_01;
+package sharoyko.Task_01;
 import java.util.Scanner;
 
 /**

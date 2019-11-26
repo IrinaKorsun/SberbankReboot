@@ -64,7 +64,7 @@ class Vector {
     }
 }
 
-public class Task_01 {
+public class task_01 {
     public static void main(String[] args) {
         Vector num1 = new Vector(4,5,6);
         Vector num2 = new Vector(1, 2,3);

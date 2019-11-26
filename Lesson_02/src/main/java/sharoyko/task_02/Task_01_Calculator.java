@@ -1,4 +1,4 @@
-package main.java.sharoyko.task_02;
+package sharoyko.task_02;
 
 import java.util.Scanner;
 /** Простой калькулятор

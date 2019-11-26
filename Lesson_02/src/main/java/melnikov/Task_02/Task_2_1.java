@@ -1,4 +1,4 @@
-package main.java.melnikov;
+package melnikov.Task_02;
 
 import java.util.HashMap;
 import java.util.InputMismatchException;
