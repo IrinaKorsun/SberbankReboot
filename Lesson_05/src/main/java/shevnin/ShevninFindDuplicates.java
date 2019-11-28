@@ -4,24 +4,14 @@ import java.sql.Time;
 import java.util.*;
 
 public class ShevninFindDuplicates {
-    //Преобразование byte-массива в строку
-    private static String byteToString(byte[] value){
-        String str = new String();
-        for (int i = 0; i < value.length; i++) str += (char) (value[i] + 128);
-        return str;
-    }
 
     //Поиск дубликатов
     public static List<ShevninUserSber> findDuplicates(Collection<ShevninUserSber> collA, Collection<ShevninUserSber> collB) {
-        List res = new ArrayList();
+        List<ShevninUserSber> res = new ArrayList();
         HashSet<String> set = new HashSet<>();
-        for (ShevninUserSber instance : collA) {
-            set.add(instance.getUsername() + (char)0 + instance.getEmail() + (char)0 + byteToString(instance.getPasswordHash()));
-        }
+        for (ShevninUserSber instance : collA) set.add(instance.getHash());
         for (ShevninUserSber instance : collB) {
-            if (!set.add(instance.getUsername() + (char)0 + instance.getEmail() + (char)0 + byteToString(instance.getPasswordHash()))) {
-                res.add(instance);
-            }
+            if (!set.add(instance.getHash())) res.add(instance);
         }
          return res;
     }
@@ -58,7 +48,7 @@ public class ShevninFindDuplicates {
         lostTime = System.currentTimeMillis() - lostTime;
         System.out.println("Found doubles: ");
         for (ShevninUserSber instance : doubles)
-            System.out.println(++counter + ": Username = " + instance.getUsername() + "; Email = " + instance.getEmail() + "; PasswordHash = " + byteToString(instance.getPasswordHash()));
+            System.out.println(++counter + ": Username = " + instance.getUsername() + "; Email = " + instance.getEmail() + "; PasswordHash = " + instance.getHEXPasswordHash());
         System.out.println("Lost Time : " + lostTime + " milisec.");
     }
 }
