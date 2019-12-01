@@ -25,7 +25,7 @@ public class Demo {
             for (int j = 0; j < 5; j++) {
                 p[j] = (int) (Math.random() * 9);
                 String p1 = String.valueOf(p[j]);
-                UserSber.setPasswordHash(p1);
+               // UserSber.setPasswordHash(p1);
             }
             user.add(UserSber);
         }
