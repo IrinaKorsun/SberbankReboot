@@ -2,7 +2,6 @@ package sarapulova;
 
 import java.io.File;
 import java.lang.reflect.*;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLClassLoader;
 
