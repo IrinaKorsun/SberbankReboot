@@ -47,12 +47,29 @@ public final class UserSber {
 
     @Override
     public boolean equals(Object obj) {
-        return super.equals(obj);
+        return (this.hashCode() == obj.hashCode());
     }
 
     @Override
     public int hashCode() {
-        String s = this.getUsername();
-        return Integer.valueOf(s.substring(s.indexOf('_')));
+//        System.out.println("hashCode--------------");
+//        System.out.println("name = " + this.getUsername());
+
+        String sName = this.getUsername();
+        String sEmail = this.getEmail();
+        byte[] bPassHash = this.getPasswordHash();
+        int iIndex = Integer.valueOf(sName.substring(sName.indexOf('_') + 1));
+        //System.out.println("iIndex = " + iIndex);
+
+        String sTmp = sName + sEmail + bPassHash[0];
+        int ret = 0;
+        for (int i = 0; i < sTmp.length(); i++) {
+            ret += (int)sTmp.charAt(i);
+        }
+        //System.out.println("ret = " + ret);
+        ret += iIndex;
+        //System.out.println("ret = " + ret);
+
+        return ret;
     }
 }
