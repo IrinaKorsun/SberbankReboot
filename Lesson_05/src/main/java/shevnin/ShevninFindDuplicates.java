@@ -1,19 +1,44 @@
 package shevnin;
 
-import java.sql.Time;
 import java.util.*;
 
 public class ShevninFindDuplicates {
 
     //Поиск дубликатов
     public static List<ShevninUserSber> findDuplicates(Collection<ShevninUserSber> collA, Collection<ShevninUserSber> collB) {
-        List<ShevninUserSber> res = new ArrayList();
-        HashSet<String> set = new HashSet<>();
-        for (ShevninUserSber instance : collA) set.add(instance.getHash());
-        for (ShevninUserSber instance : collB) {
-            if (!set.add(instance.getHash())) res.add(instance);
+        List<ShevninUserSber> res = new ArrayList<>();
+        HashSet<Integer> set = new HashSet<>();
+        HashMap<Integer, List<ShevninUserSber>> setCollA = new HashMap<>();
+        int hCode;
+        for (ShevninUserSber instance : collA) {
+            hCode = instance.hashCode();
+            if (set.add(hCode)) {
+                List<ShevninUserSber> values = new ArrayList<>();
+                values.add(instance);
+                setCollA.put(hCode, values);
+             } else {
+                List<ShevninUserSber> values = setCollA.get(hCode);
+                //Могут быть instance с одинаковым hashCode, поэтому все разные instance пишем в values
+                int arrSize = values.size();
+                for (int i = 0; i < arrSize; i++) { //без итератора, для избежания ConcurentModificationException
+                    if (!values.get(i).equals(instance)) values.add(instance);
+                }
+            }
         }
-         return res;
+        for (ShevninUserSber instance : collB) {
+            hCode = instance.hashCode();
+            if (!set.add(hCode)) {
+                List<ShevninUserSber> values = setCollA.get(hCode);
+                if (values != null) {    //Дубли которые есть только в collB нам не нужны
+                    for (ShevninUserSber value : values) {
+                        //окончательная сверка на случай равенства хэшей
+                        if (value.equals(instance))
+                            res.add(instance);
+                    }
+                }
+            }
+        }
+        return res;
     }
 
     //Генерация случайных имён из len символов из прописных латинских букв
@@ -33,7 +58,7 @@ public class ShevninFindDuplicates {
 
     public static void main(String[] args) {
         int counter = 0;
-         System.out.println("FindDuplicates");
+        System.out.println("FindDuplicates");
 
         Long lostTime = System.currentTimeMillis();
         Collection<ShevninUserSber> collA = new ArrayList<>();

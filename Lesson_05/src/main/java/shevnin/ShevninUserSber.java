@@ -35,7 +35,12 @@ public final class ShevninUserSber {
         this.passwordHash = passwordHash;
     }
 
-    public String getHash() {
-        return this.getUsername() + (char)0 + this.getEmail() + (char)0 + this.getHEXPasswordHash();
+    public int hashCode() {
+        String hachString = this.getUsername() + (char)0 + this.getEmail() + (char)0 + this.getHEXPasswordHash();
+        return hachString.hashCode();
+    }
+
+    public boolean equals(ShevninUserSber obj) {
+        return this.getUsername().equals(obj.getUsername()) && this.getEmail().equals(obj.getEmail()) && this.getHEXPasswordHash().equals(obj.getHEXPasswordHash());
     }
 }
