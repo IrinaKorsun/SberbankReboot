@@ -1,4 +1,4 @@
-package ostrikova;
+package ostrikova.task_01;
 import java.util.Scanner;
 
 class Vector {

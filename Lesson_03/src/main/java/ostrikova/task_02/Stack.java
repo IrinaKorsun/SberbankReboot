@@ -1,4 +1,4 @@
-package ostrikova;
+package ostrikova.task_02;
 
 class Stack {
     int size = 10; //максимальный размер очереди

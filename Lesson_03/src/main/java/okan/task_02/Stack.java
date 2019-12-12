@@ -1,4 +1,4 @@
-package okan.task_01_okan;
+package okan.task_02;
 
 class Stack {
 

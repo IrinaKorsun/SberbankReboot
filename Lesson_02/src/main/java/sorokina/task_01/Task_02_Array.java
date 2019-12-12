@@ -1,4 +1,4 @@
-package sorokina;
+package sorokina.task_01;
 
 import java.util.Arrays;
 import java.util.Scanner;

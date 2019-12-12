@@ -1,4 +1,4 @@
-package nalimov.task_01;
+package nalimov.task_02;
 
 import java.util.Arrays;
 

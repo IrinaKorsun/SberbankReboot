@@ -1,4 +1,4 @@
-package ostrikova;
+package ostrikova.task_02;
 
 public class Queue {
     int size = 10; // размер очереди

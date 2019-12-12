@@ -1,4 +1,4 @@
-package sorokina;
+package sorokina.task_02;
 import java.util.Scanner;
 
 public class Task_02_Simple_Calc {

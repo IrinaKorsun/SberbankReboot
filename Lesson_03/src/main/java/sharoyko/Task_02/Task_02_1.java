@@ -1,4 +1,4 @@
-package sharoyko;
+package sharoyko.Task_02;
 
 
 class Stack {
