@@ -1,4 +1,4 @@
-package kasyanov;
+package kasyanov.task_02;
 
 // Не могу запустить этот код в идее так как выходит ошибка:
 // Error:(67, 8) java: class Task_01 is public, should be declared in a file named Task_01.java
