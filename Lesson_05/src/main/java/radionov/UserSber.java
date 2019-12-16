@@ -1,7 +1,6 @@
 package radionov;
 
 import java.util.Arrays;
-import java.util.Objects;
 
 public class UserSber {
     private String username;
@@ -50,8 +49,9 @@ public class UserSber {
 
     @Override
     public int hashCode() {
-        int result = Objects.hash(username, email);
-        result = 31 * result + Arrays.hashCode(passwordHash);
+        int result = Arrays.hashCode(passwordHash);
+        result = 31*result + username.hashCode();
+        result = 31*result + email.hashCode();
         return result;
     }
 }
