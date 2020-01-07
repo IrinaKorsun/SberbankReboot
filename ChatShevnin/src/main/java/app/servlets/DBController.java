@@ -82,9 +82,10 @@ public class DBController {
                             if (rs.getString(1).equals("0")) {
                                 try {
                                     stmt.execute(insert);
-                                } catch (SQLException e) {
+                                    result = "SUCCESS";
+                                } catch (SQLException e1) {
+                                    result = e1.getMessage();
                                 }
-                                result = "SUCCESS";
                             } else result = "Пользователь " + myId + " уже существует!";
                         }
                         rs.close();
@@ -95,18 +96,17 @@ public class DBController {
             }
         } catch (SQLException e) {
             result = e.getMessage();
-        } finally {
-            return result;
         }
+        return result;
     }
 
     public static Map<String, String> getUserData(String myId, String tryPass) {
         Map<String, String> result = new HashMap<>();
-        String query = "select \"NAME\", \"LOGIN\", \"PASSWORD\" from public.\"USER\"";
-        String userName = new String();
-        String userId = new String();
-        String users = new String();
-        String usersActive = new String();
+        String query = "select \"NAME\", \"LOGIN\", \"PASSWORD\" from public.\"USER\" order by \"NAME\"";
+        String userName;
+        String userId;
+        StringBuilder users = new StringBuilder(new String());
+        String usersActive;
         Sessions sessions = Sessions.getInstance();
         try {
             Connection con = connect();
@@ -126,12 +126,12 @@ public class DBController {
                                 }
                                 if (entry.getKey().equals(myId)) result.put("CONNECT", "TRUE");
                             }
-                            users = users + "{\"name\":\"" + userName + "\",\"id\":\"" + userId + "\",active:" + usersActive + "},";
+                            users.append("{\"name\":\"").append(userName).append("\",\"id\":\"").append(userId).append("\",active:").append(usersActive).append("},");
                             if (tryPass != null && userId != null && userId.equals(myId) && tryPass.equals(rs.getString(3)))
                                 result.put("myName", userName);
                         }
-                        users = users.substring(0, users.length() - 1);
-                        result.put("users", users);
+                        users = new StringBuilder(users.substring(0, users.length() - 1));
+                        result.put("users", users.toString());
                         rs.close();
                     }
                     stmt.close();
@@ -139,9 +139,9 @@ public class DBController {
                 con.close();
             }
         } catch (SQLException e) {
-        } finally {
-            return result;
+            result.put("error", e.getMessage());
         }
+        return result;
     }
 
 }
