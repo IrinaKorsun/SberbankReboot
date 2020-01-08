@@ -7,12 +7,20 @@
 
         ws.onopen = function () {
           appendMessage('','Вы вошли в чат!');
+          let data = {
+            EVENT: "HELLO",
+            id: yourKey,
+            sender: yourName
+          };
+          ws.send(JSON.stringify(data));
         };
 
         ws.onmessage = function (event) {
-            if (event.data.indexOf("NewConnection:") == 0 || event.data.indexOf("DelConnection:") == 0) {
+            var data = JSON.parse(event.data);
+            //alert(event.data);
+            if (data.EVENT == "CONNECT" || data.EVENT == "DISCONNECT") {
                 var active = false;
-                if (event.data.indexOf("New") == 0) active = true;
+                if (data.EVENT == "CONNECT") active = true;
                 var userList = document.querySelector("div.userlist");
                 var elems = userList.childNodes;
                 var found = "";
@@ -20,7 +28,7 @@
                   function(elem) {
                       var chbox = elem.childNodes[0];
                       var label = elem.childNodes[1];
-                      if (chbox.id == event.data.substring(14)) {
+                      if (chbox.id == data.KEY) {
                           found = chbox.id;
                           chbox.disabled = !active;
                           if (chbox.disabled) {
@@ -33,10 +41,11 @@
                   }
                 );
                 if (found == "") {
-                    userList.appendChild(crCheckBox('users', event.data.substring(14), event.data.substring(14), active));
+                    userList.appendChild(crCheckBox('users', data.VALUE, data.KEY, active));
                 }
             } else {
-                appendMessage('', event.data);
+                if (data.id == yourKey) appendMessage('', data.message + " >> " + data.value);
+                else appendMessage('', data.sender + "> " + data.message);
             }
         };
 
@@ -48,10 +57,6 @@
             appendMessage(err);
         };
     };
-
-    function setUsers() {
-
-    }
 
     function appendMessage(type, text) {
         var localDate = new Date();
@@ -90,18 +95,18 @@
         var elems = userList.childNodes;
         elems.forEach(
           function(elem) {
-          var chbox = elem.childNodes[0];
-          if (chbox.checked) {
-                var xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function () {
-                    if (this.readyState == 4 && this.status == 200) {
-                        appendMessage(yourName, message.value + ' >> ' + chbox.value);
-                         message.value = "";
-                    }
-                };
-                xhttp.open("POST", "/chat/send?key=" + chbox.id + "&sender=" + yourName + "&msg=" + message.value, true);
-                xhttp.send();
-          }
+              var chbox = elem.childNodes[0];
+              if (chbox.checked) {
+                  let data = {
+                    EVENT: "MESSAGE",
+                    id: yourKey,
+                    sender: yourName,
+                    key: chbox.id,
+                    value: chbox.value,
+                    message: message.value
+                  };
+                  ws.send(JSON.stringify(data));
+              }
           }
         );
    }

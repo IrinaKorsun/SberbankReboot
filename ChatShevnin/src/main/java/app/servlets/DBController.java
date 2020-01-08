@@ -1,7 +1,5 @@
 package app.servlets;
 
-import app.servlets.chat.Sessions;
-
 import javax.websocket.Session;
 import java.sql.Connection;
 import java.util.Date;

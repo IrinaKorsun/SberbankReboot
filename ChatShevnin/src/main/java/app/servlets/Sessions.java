@@ -1,4 +1,4 @@
-package app.servlets.chat;
+package app.servlets;
 
 import javax.websocket.Session;
 import java.util.HashMap;
